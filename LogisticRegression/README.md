@@ -9,6 +9,12 @@ This Python class implements a logistic regression classifier. Logistic regressi
   - $b := b - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(y_{\text{pred}} - y_{\text{true}})$
 
 
+###### - $m$ is the number of training examples.
+###### - $X$ is the features.
+###### - $y_{pred}$ is the predicted probability of the positive class.
+###### - $y_{true}$ is the true label (0 or 1).
+###### - $\alpha$ is the learning rate.
+
 ##### Installation
 
 You can install the LogisticRegression class by cloning this repository or by directly copying the LogisticRegression class into your project.
