@@ -1,3 +1,8 @@
+"""
+Programmed by Behnaaz Fakhar <fakhar.behnaz@gmail.com>
+*    2019-06-28 Initial coding
+
+"""
 class ActivationFunctions:
     @staticmethod
     def sigmoid(Z: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
