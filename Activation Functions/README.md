@@ -26,7 +26,7 @@ To use the ActivationFunctions class, you can simply copy the class definition i
 ##### Usage
 Instantiate the ActivationFunctions class, and then you can use its methods to compute activations and their derivatives.
 ```python
-from activation_functions import ActivationFunctions
+from activation_fn import ActivationFunctions
 import numpy as np
 
 # Example usage
