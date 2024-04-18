@@ -5,9 +5,9 @@ This Python class implements a logistic regression classifier. Logistic regressi
 
 You can install the LogisticRegression class by cloning this repository or by directly copying the LogisticRegression class into your project.
 ##### Methods
-- fit(X_train, y_train, X_val=None, y_val=None, patience=None, print_loss=True, plot_loss=True):
+- ```python fit(X_train, y_train, X_val=None, y_val=None, patience=None, print_loss=True, plot_loss=True):```
     - Fit the logistic regression model to the training data with optional early stopping and loss plotting.
-- predict(X_test):
+- ```python predict(X_test):```
     - Predict class labels for test data.
 ##### Usage
 ```python
