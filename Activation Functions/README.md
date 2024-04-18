@@ -1,52 +1,46 @@
-# K-fold cross validation technique in Python
+### Activation Functions
+ActivationFunctions is a Python class that provides implementations of commonly used activation functions for neural networks. This class offers methods to compute activation functions such as sigmoid, ReLU (Rectified Linear Unit), and hyperbolic tangent (tanh), as well as their derivatives for backpropagation.
 
-# Table of Contents
-1. [Objective](#objective)
-2. [Instructions](#instructions)
-4. [Description](#description)
+##### Sigmoid:
+  - $A = \frac{1}{1 + e^{-z}}$
+  - $\frac{\partial A}{\partial Z} = A \cdot (1 - A)$
 
--------------------------------------------------------------------------------------------
-## 1. Objective
-- Write K-fold cross validation technique in Python.
+##### ReLU (Rectified Linear Unit) Function:
+ - $A = \max(0, z)$
+ - $\frac{\partial A}{\partial Z} = 0 \text{  if  } (Z < 0), \frac{\partial A}{\partial Z} = 1 \text{  if  } Z \geq 0 $
 
 
-## 2. instructions
-
-##### 2.1 Conditions
-- Every element from the sample should be used exactly once in testing sets.
-- Every element from the sample should be used at least once in training sets.
-- The sizes of the pairs of testing sets may differ by no more than 1.
-
-##### 2.2 Inputs
-- An array of integers indices, which contains the indices of elements in data sample.
-- An integer K which, refers to the number of folds.
-
-##### 2.3 Output
-- An array that contains the arrays of folds.
-
-##### 2.4 Assumptions
-- N is an integer within the range [2, ..., 100].
-- K is an integer within the range [2, ..., N].
-- Each element of array indices is an integer within the range [0, ..., 100,000].
-- The elements of indices are all distinct.
-
-##### 2.5 Example
-- Given indices = [1,2,3] and K = 2;
-    - One of the accepted results may be [[1,2],[3],[3],[1,2]]
-i.e. first fold contains [1,2] as the training set and [3] as the testing set and second fold contains [3] as the training set and [1,2] as the testing set.
-
-## 3. Description
-
-###### Let's assume:
-
-_**jump**_: Result of the division between N and K after rounding up.
-
-_**rem**_: Remainder of the division between N and K.
-
-###### Then, some possible test cases can be summarized as follows:
-
-![image](https://user-images.githubusercontent.com/59096353/134703667-fb03cfbc-fbe2-4a32-a435-dc438774d4fa.png)
+   
 
 
 
+##### Tanh (Hyperbolic Tangent) Function:
+ - $A = \frac{e^z - e^{-z}}{e^z + e^{-z}} = \tanh(Z)$
+ - $\frac{\partial A}{\partial Z} = 1 - \tanh^2(Z)$
 
+
+
+##### Installation
+To use the ActivationFunctions class, you can simply copy the class definition into your Python project. There are no additional dependencies required.
+
+##### Usage
+Instantiate the ActivationFunctions class, and then you can use its methods to compute activations and their derivatives.
+```python
+from activation_functions import ActivationFunctions
+import numpy as np
+
+# Example usage
+Z = np.array([0.5, -1.2, 3.0, -0.8])
+
+# Compute sigmoid activation
+A_sigmoid, cache_sigmoid = ActivationFunctions.sigmoid(Z)
+print("Sigmoid:", A_sigmoid)
+
+# Compute ReLU activation
+A_relu, cache_relu = ActivationFunctions.relu(Z)
+print("ReLU:", A_relu)
+
+# Compute tanh activation
+A_tanh, cache_tanh = ActivationFunctions.tanh(Z)
+print("Tanh:", A_tanh)
+```
