@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Programmed by Behnaaz Fakhar <fakhar.behnaz@gmail.com>
 *    2019-04-28 Initial coding
