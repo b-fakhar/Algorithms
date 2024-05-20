@@ -6,7 +6,7 @@ This Python class implements a logistic regression classifier. Logistic regressi
 - $\text{Cost} = \frac{-1}{m} \sum\limits_{i=1}^{m} \left(y \log(\hat{y}) + (1 - y) \log(1 - \hat{y})\right)$
 - Gradient Descent:
   - $W := W - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(y_{\text{pred}} - y_{\text{true}}) X$
-  - $b := b - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(y_{\text{pred}} - y_{\text{true}})$
+  - $b  := b - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(y_{\text{pred}} - y_{\text{true}})$
 
 
 ###### - $m$ is the number of training examples.
